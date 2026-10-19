@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font-family Lato link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Montserrat Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./assets/plugins/animate.min.css">
+    <title>Start Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            line-height: 1.5;
+        }
+        body {
+            margin: 0;
+        }
+        /* Navigation Bar Rules */
+
+        /* 1. Navbar Main Red Background Color And Box Model */
+        .main-wrapper {
+            background-color: #f44336;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            /* overflow: hidden; */
+        }
+
+        /* 2. Horizontal Alignment Formatting For Buttons Using Float */
+        .nav-btn {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 12px 24px;
+            font-family: "Lato", sans-serif;
+            font-size: 18px;
+            text-decoration: none;
+            border: none;
+        }
+
+        /* 3. Active State Status Styling  */
+        .nav-btn.active {
+            background-color: #fff;
+            color: black;
+        }
+
+        /* 4. Interation Hover State Rule For Backgraound Color Transformation */
+        .nav-btn:hover:not(.active) {
+            background-color: #fff;
+            color: black;
+            cursor: pointer;
+        }
+        /* THE CLEARING MECHANISM */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* HERO BANNER PROPERTIES */
+
+        /* 1. Main Background Fill And Absoulte Padding Layout */
+        .hero-banner {
+            background-color: #f44336;
+            color: white;
+            text-align: center;
+            padding: 128px 16px;
+            margin: 0;
+            box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+        }
+
+        /* 2. Main Title Typography Adjustments */
+        .hero-title {
+            font-family: "montserrat", sans-serif;
+            font-size: 64px;
+            font-weight: 400;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin: 16px;
+        }
+
+        /* 3. Subtitle Typography Formatting Layout Nodes */
+        .hero-subtitle {
+            font-family: "Lato", sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            margin: 32px;
+        }
+
+        /* 4. Action Button Custom Interactive Stylig Parameters */
+        .start-btn {
+            background-color: black;
+            color: #fff;
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            border: none;
+            cursor: pointer;
+            padding: 12px 24px;
+            transition: background-color 0.2s ease;
+        }
+
+        /* 5. Trigger Color Change On Target Button Overlay */
+        .start-btn:hover {
+            background-color: #ccc;
+            color: #000;
+        }
+
+        /* SECTION LAYOUT PROPERTIES */
+        .content-wrapper-secondary {
+            background-color: #fff;
+            padding: 64px 16px;
+            width: 100%;
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+        }
+
+        .content-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* LEFT COLUMN */
+        .column-main-left {
+            float: left;
+            width: calc(66.66% - 40px);
+            padding-right: 40px;
+            text-align: left;
+        }
+
+        /* RIGHT COLUMN */
+        .column-main-right {
+            float: left;
+            width: 33.33%;
+            text-align: center;
+        }
+
+        /* HEADING */
+        .column-main-left h2 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 36px;
+            font-weight: 400;
+            margin: 10px 0 30px;
+        }
+
+        /* FIRST PARAGRAPH */
+        .content-subtitle {
+            font-family: "Lato", sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 0 0 50px;
+        }
+
+        /* SECOND PARAGRAPH */
+        .content-text {
+            font-family: "Lato", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #777;
+        }
+
+        /* ANCHOR ICON */
+        .icon-box-secondary {
+            padding: 40px 0;
+            font-size: 200px;
+            color: #f44336;
+        }
+
+        /* SECOND SECTION */
+        .content-wrapper-white {
+            background-color: #f1f1f1;
+            padding: 64px 16px;
+            width: 100%;
+            margin: 0;
+        }
+
+        .content-inner-box {
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* LEFT SIDE: Coffee Icon */
+        .column-side-center {
+            float: left;
+            width: 50%;
+            text-align: center;
+        }   
+
+        /* RIGHT SIDE: Text */
+        .column-side-text {
+            float: left;
+            width: 50%;
+            text-align: left;
+        }
+
+        /* Icon */
+        .icon-box-white-section {
+            padding: 64px 0;
+            font-size: 200px;
+            color: #f44334;
+        }
+
+        /* SECOND SECTION HEADING */
+        .content-title {
+            font-family: "Montserrat", sans-serif;
+            font-size: 36px;
+            font-weight: 400;
+            margin: 10px 0 30px;
+        }
+
+        /* SECOND SECTION FIRST PARAGRAPH */
+        .content-wrapper-white .content-subtitle {
+            font-family: "Lato", sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0 0 50px;
+        }
+
+        /* SECOND SECTION SECOND PARAGRAPH */
+        .content-wrapper-white .content-text {
+            font-family: "Lato", sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #777;
+        }
+
+        /* QUOTE BANNER STYLING */
+        .quote-banner {
+            background-color: #616161;
+            color: #fff;
+            text-align: center;
+            padding: 64px 16px;
+            width: 100%;
+        }
+
+        .quote-title {
+            font-family: "Montserrat", sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            margin: 16px;
+        }
+
+        /* FOOTER STYLING */
+        footer {
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            padding: 64px;
+            width: 100%;
+        }
+
+        .social-links {
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .social-links a {
+            color: #666;
+            font-size: 24px;
+            text-decoration: none;
+            margin: 0;
+            opacity: 0.9;
+            transition: opacity 0.2s ease;
+        }
+
+        .social-links a:hover {
+            opacity: 1.0;
+            cursor: pointer;
+        }
+
+        .footer-text {
+            font-family: "Lato", sans-serif;
+            font-size: 15px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .footer-text a {
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        /* Tablet Layout Zone */
+        @media screen and (max-width: 991px) {
+            .content-container, .content-inner-box {
+                max-width: 720px;
+            }
+
+            .nav-btn {
+                font-size: 15px;
+            }
+
+            .hero-banner {
+                padding: 50px 16px;
+            }
+
+            .hero-title {
+                font-size: 50px;
+                line-height: 1.2;
+                letter-spacing: 1px;
+            }
+            .hero-subtitle {
+                font-size: 20px;
+                margin-bottom: 24px;
+            }
+            .start-btn {
+                font-size: 14px;
+                padding: 10px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <div class="main-wrapper clearfix">
+
+        <!-- Active Link (Home) -->
+        <a href="#" class="nav-btn active">Home</a>
+
+        <!-- Navigation Sibling Links -->
+        <a href="#" class="nav-btn">Link 1</a>
+        <a href="#" class="nav-btn">Link 2</a>
+        <a href="#" class="nav-btn">Link 3</a>
+        <a href="#" class="nav-btn">Link 4</a>
+
+    </div>
+
+    <!-- Header -->
+    <header class="hero-banner">
+        <!-- Title Heading -->
+        <h1 class="animate__animated animate__backInDown hero-title">START PAGE</h1>
+        <P class="hero-subtitle">Template by w3.css</P>
+        <button type="button" class="start-btn">Get Started</button>
+    </header>
+
+    <!-- FIRST SECTION -->
+    <div class="content-wrapper-secondary clearfix">
+        <div class="content-container">
+            <!-- LEFT COLUMN -->
+            <div class="column-main-left">
+                <h2>Lorem Ipsum</h2>
+                <p class="content-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p class="content-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua.
+                </p>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="column-main-right">
+                <div class="icon-box-secondary">
+                    <i class="fa fa-anchor"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECOND SECTION -->
+    <div class="content-wrapper-white clearfix">
+        <div class="content-inner-box">
+            <!-- LEFT COLUMN: Coffee Icon -->
+            <div class="column-side-center">
+                <div class="icon-box-white-section">
+                    <i class="fa fa-coffee"></i>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Flow Data -->
+            <div class="column-side-text">
+                <h2 class="content-title">Lorem Ipsum</h2>
+                <p class="content-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                    do eiusmod tempor incididunt ut labore et dolore magna 
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p class="content-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                    commodo consequat. Excepteur sint occaecat cupidatat non proident, 
+                    sunt in culpa qui officia deserunt mollit anim id est laborum consectetur 
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                    magna aliqua.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUOTE -->
+    <div class="quote-banner">
+        <p class="wow animate__animated animate__rollIn quote-title">Quote of the day: live life</p>
+    </div>
+
+    <!-- FOOTER  -->
+    <footer>
+        <!-- Social Interface Area -->
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-snapchat"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+
+        <!-- Text Node -->
+        <p class="footer-text">
+            Powered by <a href="https://w3schools.com" target="_blank" rel="noopener">w3.css</a>
+        </p>
+    </footer>
+
+    <script src="./assets/plugins/wow.min.js"></script>
+        <script>
+        new WOW().init();
+        </script>
+</body>
+</html>
